@@ -1,0 +1,26 @@
+.like {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  .line {
+    width: 169px;
+    height: 4px;
+    border-radius: 5px;
+    background: $aqua;
+  }
+
+  .titleLike {
+    color: $black;
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+}

@@ -1,0 +1,103 @@
+.item {
+  width: 336px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+
+  .card {
+    height: 418px;
+    border-radius: 25px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    position: relative;
+
+    img {
+      width: 336px;
+      height: 266px;
+      border-radius: 25px 25px 0px 0px;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      margin-left: 25px;
+      margin-right: 25px;
+      height: 30px;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-family: "Montserrat";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        text-align: left;
+      }
+
+      span {
+        font-family: "Montserrat";
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: right;
+        margin-top: 4px;
+      }
+    }
+
+    .character {
+      display: flex;
+      flex-direction: row;
+      border-top: 1px solid $grey;
+      align-items: center;
+      column-gap: 40px;
+      padding-left: 40px;
+
+      .section {
+        display: flex;
+        flex-direction: row;
+        column-gap: 5px;
+        align-items: center;
+      }
+
+      .line {
+        width: 1px;
+        height: 60px;
+        background: $grey;
+      }
+
+      span {
+        color: $black;
+        font-family: "Montserrat";
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .link {
+    text-decoration: none;
+
+    button {
+      width: 157px;
+      height: 33px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      background: $btn;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $white;
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+}

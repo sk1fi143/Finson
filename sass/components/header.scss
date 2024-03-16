@@ -1,0 +1,64 @@
+header {
+  width: 1920px;
+  height: 80px;
+  background: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-left: 70px;
+
+    span {
+      color: $aqua;
+      font-family: "Montserrat";
+      font-size: 14.04px;
+      font-weight: 600;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 60px;
+    list-style-type: none;
+
+    li {
+      color: $black;
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      cursor: pointer;
+    }
+
+    li:hover{
+        color: $aqua;
+    }
+  }
+
+  .phone{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    cursor: pointer;
+    align-items: center;
+    margin-right: 70px;
+
+    span{
+        color: $aqua;
+font-family: 'Montserrat';
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+text-align: right;
+    }
+  }
+}
