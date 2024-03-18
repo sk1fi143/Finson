@@ -3,3 +3,11 @@
 @import './libs/fonts';
 @import './components/all';
 @import './pages/allPages';
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+
+}

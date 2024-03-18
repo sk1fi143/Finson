@@ -1,4 +1,4 @@
-import ItemPageComp from "@/components/itemPage";
+import ItemPageRent from "@/components/itemRentPage";
 import data from "@/app/data";
 
 export const metadata = {
@@ -6,10 +6,20 @@ export const metadata = {
 };
 
 export default function ItemPage({ params }) {
-  metadata.title = params.slug;
+  const selectedItem = data.rent.find(item => item.slug === params.slug);
+  if(!selectedItem){
+    return(
+      <h1>Объект не найден</h1>
+    )
+  } else { metadata.title = selectedItem.name; }
   return (
     <div>
-      <ItemPageComp textDescr='ffdsfdfdfdfdfdf' title={data.params}/>
+      <ItemPageRent
+        textDescr='ffdsfdfdfdfdfdf'
+        textRent='qwqwqwqwqw'
+        title={selectedItem.name}
+        price={selectedItem.price}
+      />
     </div>
   );
 }

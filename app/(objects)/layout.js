@@ -1,7 +1,6 @@
-export default function RentLayout({ children, title }) {
+export default function RentLayout({ children }) {
   return (
     <main>
-      <h2 className="title">{title}</h2>
       {children}
     </main>
   );

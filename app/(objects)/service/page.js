@@ -9,13 +9,12 @@ export const metadata = {
 export default function RentPage() {
   return (
     <>
-      <RentLayout title="Все услуги">
-        <div className="wrap">
-          {data.service.map((item) => (
-            <ItemCard item={item} key={item.name} />
-          ))}
-        </div>
-      </RentLayout>
+      <h2 className="title">Все услуги</h2>
+      <div className="wrap">
+        {data.service.map((item) => (
+          <ItemCard item={item} key={item.name} />
+        ))}
+      </div>
     </>
   );
 }

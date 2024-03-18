@@ -1,12 +1,25 @@
+import ItemPagePurch from "@/components/itemPurchPage";
+import data from "@/app/data";
+
 export const metadata = {
   title: "FINSON PROPERTY",
 };
 
 export default function ItemPage({ params }) {
-  metadata.title = params.slug;
+  const selectedItem = data.purchase.find(item => item.slug === params.slug);
+  if(!selectedItem){
+    return(
+      <h1>Объект не найден</h1>
+    )
+  } else { metadata.title = selectedItem.name; }
   return (
     <div>
-      <h1>{params.slug}</h1>
+      <ItemPagePurch
+        textDescr='qqwqwqwqwqwqwqwqw'
+        title={selectedItem.name}
+        price={selectedItem.price}
+      />
     </div>
   );
 }
+
