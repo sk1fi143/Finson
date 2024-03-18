@@ -4,7 +4,7 @@ import DescriptionItem from './descriptionItem'
 import Form from './form'
 import Image from 'next/image'
 
-export default function ItemPageComp({ title, textDescr, price }) {
+export default function ItemPageRent({ title, textDescr, price, textRent }) {
   return (
     <div className='ItemPageComp'>
         <div className='col'>
@@ -19,9 +19,8 @@ export default function ItemPageComp({ title, textDescr, price }) {
                 <Image src='' alt='' className='gallery__img'/>
                 <Image src='' alt='' className='gallery__img'/>
             </div>
-            <DescriptionItem description={textDescr}/>
-            <DescriptionItem description={textDescr}/>
-            <DescriptionItem description={textDescr}/>
+            <DescriptionItem type='Описание' description={textDescr}/>
+            <DescriptionItem type='Условия аренды' description={textRent}/>
             <YouCanLike />
         </div>
         <div className='col2'>
@@ -30,7 +29,7 @@ export default function ItemPageComp({ title, textDescr, price }) {
                 <span>{price} бат / мес</span>
             </div>
             <span className='dopInfoPrice'>Стоимость при оплате за месяц(а) может отличаться</span>
-            <Form />
+            <Form date='Дата заезда'/>
         </div>
     </div>
   )

@@ -1,0 +1,422 @@
+.AboutUs-main {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+
+  .AboutUs-top-main {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding-bottom: 40px;
+    column-gap: 99px;
+    padding: auto;
+    position: relative;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+    }
+
+    &__text-info {
+      max-width: 433px;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 400px;
+      color: $dark-grey;
+    }
+
+    &__title {
+      color: $aqua;
+      font-size: 38px;
+      line-height: 44.88px;
+      font-weight: 800px;
+    }
+
+    &__logo-info {
+      display: flex;
+      flex-direction: row;
+      column-gap: 102px;
+      margin: auto 0px;
+    }
+
+    &__logo-info-element {
+      column-gap: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__logo-info-element svg {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__number-text-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &__number-info {
+      text-align: left;
+      font-size: 36px;
+      color: $aqua;
+      font-weight: 800;
+      line-height: 43.88px;
+    }
+
+    &__number-from-info {
+      text-align: left;
+      font-size: 18px;
+      color: $dark-grey;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    &__line {
+      background-color: $aqua;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+    }
+  }
+  .AboutUs-bottom-main {
+    display: flex;
+    flex-direction: row;
+    column-gap: 353px;
+
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      row-gap: 21px;
+    }
+
+    &__navigat-block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+
+    &__contact-element {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      padding: auto 0px;
+    }
+
+    &__title {
+      color: $aqua;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 43.88px;
+    }
+
+    &__name {
+      margin: auto 0px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21.94px;
+    }
+
+    &__social-network-element {
+      display: flex;
+      flex-direction: row;
+      column-gap: 209px;
+    }
+
+    &__social-network-info {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+    }
+
+    &__social-button {
+      width: 157px;
+      height: 33px;
+      border-radius: 25px;
+      background: linear-gradient(87.14deg, rgb(13, 184, 214) 0.11%, rgb(32, 140, 147) 99.901%);
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17.07px;
+      align-items: center;
+      color: $white;
+      margin: auto 0px;
+      cursor: pointer;
+    }
+
+    &__text-button {
+      color: $white;
+    }
+
+    &__biglogoblock {
+      display: flex;
+      flex-direction: column;
+      row-gap: 22.05px;
+      align-items: center;
+    }
+
+    &__biglogotext {
+      color: $aqua;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 39.01px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .AboutUs-main {
+    .AboutUs-top-main {
+      column-gap: 207px;
+      height: 371px;
+
+      &__logo-info {
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 0px;
+      }
+    }
+    .AboutUs-bottom-main {
+      column-gap: 48px;
+
+      &__biglogo {
+        width: 350px;
+        height: 226.07px;
+      }
+
+      &__biglogoblock {
+        row-gap: 15.43px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .AboutUs-main {
+
+    .AboutUs-top-main {
+      column-gap: 75.75px;
+      height: 371px;
+
+      &__logo-info {
+        flex-direction: column;
+        row-gap: 30px;
+        margin: 0px;
+      }
+
+      &__text-info {
+        max-width: 324.75px;
+      }
+    }
+    .AboutUs-bottom-main {
+      column-gap: 34px;
+
+      &__biglogo {
+        width: 300px;
+        height: 193.77px;
+      }
+
+      &__biglogoblock {
+        row-gap: 15.43px;
+      }
+
+      &__biglogotext {
+        font-size: 22px;
+        line-height: 22.82px;
+      }
+
+      &__social-network-element {
+        column-gap: 91px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .AboutUs-main {
+    padding: 15px;
+
+    .AboutUs-top-main {
+      flex-direction: column;
+      row-gap: 60px;
+      align-items: center;
+      height: 484px;
+
+      &__info {
+        row-gap: 4px;
+      }
+
+      &__title {
+        font-size: 22px;
+      }
+
+      &__text-info {
+        max-width: 450px;
+        font-size: 14px;
+      }
+
+      &__logo-info {
+        flex-direction: column;
+        row-gap: 30px;
+        margin: 0px;
+      }
+
+      &__text-info {
+        max-width: 450px;
+      }
+
+      &__logo-img {
+        width: 40px;
+        height: 40px;
+        margin: auto 0px;
+      }
+
+      &__logo-info {
+        row-gap: 0px;
+      }
+
+      &__logo-info-element svg {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        margin: auto 0px;
+      }
+
+      &__number-text-info {
+        row-gap: 0px;
+      }
+
+      &__number-info {
+        font-size: 36px;
+      }
+
+      &__number-from-info {
+        font-size: 14px;
+      }
+    }
+    .AboutUs-bottom-main {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+
+      &__contacts {
+        row-gap: 15px;
+        margin-left: 15px;
+        margin-right: auto;
+      }
+
+      &__title {
+        font-size: 22px;
+      }
+
+      &__social-network-element {
+        column-gap: 89px;
+      }
+
+      &__biglogo {
+        width: 200px;
+        height: 129.18px;
+      }
+
+      &__biglogotext {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .AboutUs-main {
+    padding: 15px 10px;
+
+    .AboutUs-top-main {
+      flex-direction: column;
+      row-gap: 60px;
+      align-items: center;
+      height: 484px;
+
+      &__info {
+        row-gap: 4px;
+      }
+
+      &__title {
+        font-size: 22px;
+      }
+
+      &__text-info {
+        max-width: 300px;
+        font-size: 14px;
+      }
+
+      &__logo-info {
+        flex-direction: column;
+        row-gap: 30px;
+        margin: 0px;
+      }
+
+      &__text-info {
+        max-width: 450px;
+      }
+
+      &__logo-img {
+        width: 40px;
+        height: 40px;
+        margin: auto 0px;
+      }
+
+      &__logo-info {
+        row-gap: 0px;
+      }
+
+      &__logo-info-element svg {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        margin: auto 0px;
+      }
+
+      &__number-text-info {
+        row-gap: 0px;
+      }
+
+      &__number-info {
+        font-size: 36px;
+      }
+
+      &__number-from-info {
+        font-size: 14px;
+      }
+    }
+    .AboutUs-bottom-main {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+
+      &__contacts {
+        row-gap: 15px;
+      }
+
+      &__title {
+        font-size: 22px;
+      }
+
+      &__social-network-element {
+        column-gap: 69px;
+      }
+
+      &__biglogo {
+        width: 200px;
+        height: 129.18px;
+      }
+
+      &__biglogotext {
+        font-size: 22px;
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ export const Header = () => {
         <Link href='/rent'><li className="menu__item">Аренда</li></Link>
         <Link href='/purchase'><li className="menu__item">Продажа</li></Link>
         <Link href='/service'><li className="menu__item">Услуги</li></Link>
-        <li className="menu__item">О нас</li>
+        <Link href='/about'><li className="menu__item">О нас</li></Link>
       </ul>
       <div className="phone">
         <svg
