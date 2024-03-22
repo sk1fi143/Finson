@@ -1,0 +1,11 @@
+.itemService {
+  .cardService {
+    height: 358px;
+    border-radius: 25px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    position: relative;
+  }
+}

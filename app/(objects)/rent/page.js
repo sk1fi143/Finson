@@ -1,46 +1,67 @@
-'use client'
+"use client";
 
 import { ItemCard } from "@/components/itemCard";
 import data from "@/app/data";
-import Filter, { convertStringToQueriesObject } from "@/components/filter";
-import { useSearchParams } from "next/navigation";
+import Filter from "@/components/filter";
+import { useState } from "react";
 
-// export const metadata = {
-//   title: "Аренда",
-// };
 
-function isAvailable(arr1, arr2) {
-  if (!arr1 || !arr2) {
-    return true;
-  }
-  return arr1.some((item) => arr2?.includes(item));
+const filterOptions = {
+  "Тип жилья": [
+    "Вилла",
+    "Бунгало",
+    "Дом",
+    "Аппартамены",
+    "Отель",
+    "Таунхаус",
+  ],
+  'Район': [
+    "Банг Тао",
+    "Камала",
+    "Карон",
+    "Ката",
+    "Катху",
+    "Маи Кхао",
+    "Най Харн",
+    "Панва",
+    "Патонг",
+    "Пхукет Таун",
+    "Равай",
+    "Сурин",
+    "Таланг",
+    "Чалонг",
+  ],
+  'Спальни': [2, 4, 6],
+  'Ванные': [2, 4, 6],
 }
 
 export default function RentPage() {
-  const searchParams = useSearchParams();
-  const paramsObj = convertStringToQueriesObject(searchParams);
-  let filteredProducts = data.rent.filter((product) => {
-    const hasType = isAvailable(product.type, paramsObj?.type);
-    const hasBedroom = isAvailable(product.bedroom, paramsObj?.bedroom);
-    const hasBathroom = isAvailable(product.bathroom, paramsObj?.bathroom);
-    return hasType && hasBedroom && hasBathroom;
-  });
-  if (Object.keys(paramsObj).length === 0) {
-    filteredProducts = data.rent;
-  }
-  if (filteredProducts === 0) {
-    return <h1>Объекты не найдены</h1>
-  }
-  console.log(filteredProducts)
+  const [filteredData, setFilteredData] = useState(data.rent);
+
+  const handleFilterChange = (criteria) => {
+    let filteredResult = data.rent.filter((item) => {
+      return (
+        (criteria["Тип жилья"].length === 0 || criteria["Тип жилья"].includes(item.type)) &&
+        (criteria["Район"].length === 0 || criteria["Район"].includes(item.district)) &&
+        (criteria["Спальни"].length === 0 || criteria["Спальни"].includes(item.bedroom)) &&
+        (criteria["Ванные"].length === 0 || criteria["Ванные"].includes(item.bathroom))
+      );
+    });
+  
+    setFilteredData(filteredResult);
+  };
+
   return (
     <>
       <h2 className="title">Все объекты на аренду</h2>
-        <Filter />
+      <div className="pageRow">
         <div className="wrap">
-          {filteredProducts.map((item) => (
+          {filteredData.map((item) => (
             <ItemCard item={item} key={item.slug} />
           ))}
         </div>
+        <Filter handleFilterChange={handleFilterChange} filterOptions={filterOptions} />
+      </div>
     </>
   );
 }

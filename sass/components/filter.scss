@@ -1,37 +1,70 @@
 .filter {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 1337px;
-  height: 120px;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 300px;
+  height: auto;
   border-radius: 25px;
   box-shadow: 0px 32px 34px 0px rgba(0, 0, 0, 0.13);
   background: $white;
-  justify-content: space-around;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  row-gap: 30px;
 
-  &__row {
+  &__title{
+    color: $black;
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    margin-right: 30px;
+    cursor: default;
+  }
+
+  &__col {
     display: flex;
-    flex-direction: row;
-    column-gap: 15px;
-    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: flex-end;
     cursor: pointer;
+    margin-right: 30px;
 
     &__span {
       color: $black;
       font-family: "Montserrat";
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 21px;
+      font-size: 18px;
+      font-weight: 500;
       letter-spacing: 0px;
-      text-align: left;
+      text-align: right;
+      cursor: default;
+    }
+
+    label{
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: right;
+      column-gap: 15px;
+      color: $black;
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0px;
+      text-align: right;
+      cursor: pointer;
+      
+      input{
+        cursor: pointer;
+      }
+    }
+
+    label:hover{
+      color: $aqua;
     }
   }
 
   &__line {
-    width: 1px;
-    height: 100%;
+    width: 100%;
+    height: 1px;
     background: $grey;
   }
 }

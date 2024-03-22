@@ -1,6 +1,5 @@
-import { ItemCard } from "../../../components/itemCard";
+import { ServiceCard } from "../../../components/serviceCard";
 import data from "../../data";
-import RentLayout from "../layout";
 
 export const metadata = {
   title: "Услуги",
@@ -12,7 +11,7 @@ export default function RentPage() {
       <h2 className="title">Все услуги</h2>
       <div className="wrap">
         {data.service.map((item) => (
-          <ItemCard item={item} key={item.name} />
+          <ServiceCard item={item} key={item.name} />
         ))}
       </div>
     </>

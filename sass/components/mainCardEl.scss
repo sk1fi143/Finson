@@ -1,0 +1,144 @@
+.Main-card {
+  width: 360px;
+  height: 360px;
+  background-color: $rai-grey;
+  border-radius: 15px;
+  transition: 0.5s;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.11);
+  }
+
+  &:hover span {
+    font-size: 22px;
+  }
+
+  &:hover div {
+    transform: scale(1.11);
+    margin: 13.33px 17.11px auto auto;
+  }
+
+  &__title-block {
+    margin: 12px 11px auto auto;
+    width: auto;
+    height: auto;
+    background-color: $white;
+    border: 2px solid $aqua;
+    border-radius: 22px;
+    transition: 0.5s;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 7px 33.89px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .Main-card {
+    width: 260px;
+    height: 260px;
+
+    &:hover span {
+      font-size: 18px;
+    }
+
+    &:hover div {
+      transform: scale(1.11);
+      margin: 10.33px 12.11px auto auto;
+    }
+
+    &__title-block {
+      margin: 12px 11px auto auto;
+      width: auto;
+      height: auto;
+      background-color: $white;
+      border: 2px solid $aqua;
+      border-radius: 20px;
+      transition: 0.5s;
+    }
+
+    &__title {
+      display: inline-block;
+      margin: 6px 17.89px;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.5s;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Main-card {
+    width: 200px;
+    height: 200px;
+
+    &:hover span {
+      font-size: 12px;
+    }
+
+    &:hover div {
+      transform: scale(1.11);
+      margin: 10.33px 14.11px auto auto;
+    }
+
+    &__title-block {
+      margin: 8px 7px auto auto;
+      width: auto;
+      height: auto;
+      background-color: $white;
+      border: 2px solid $aqua;
+      border-radius: 20px;
+      transition: 0.5s;
+    }
+
+    &__title {
+      display: inline-block;
+      margin: 6px 21.89px;
+      font-weight: 500;
+      font-size: 12px;
+      transition: 0.5s;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .Main-card {
+    width: 125px;
+    height: 124px;
+
+    &:hover span {
+      font-size: 8px;
+    }
+
+    &:hover div {
+      transform: scale(1.11);
+      margin: 5.33px 4.11px auto auto;
+    }
+
+    &__title-block {
+      margin: 4px 3px auto auto;
+      width: auto;
+      height: auto;
+      background-color: $white;
+      border: 2px solid $aqua;
+      border-radius: 20px;
+      transition: 0.5s;
+    }
+
+    &__title {
+      display: inline-block;
+      margin: 3px 7px;
+      font-weight: 500;
+      font-size: 8px;
+      transition: 0.5s;
+    }
+  }
+}

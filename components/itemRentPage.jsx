@@ -3,8 +3,9 @@ import YouCanLike from './youCanLike'
 import DescriptionItem from './descriptionItem'
 import Form from './form'
 import Image from 'next/image'
+import Parameters from "@/components/parameters";
 
-export default function ItemPageRent({ title, textDescr, price, textRent }) {
+export default function ItemPageRent({ title, textDescr, price, textRent, tableType, data, selectedItemSlug }) {
   return (
     <div className='ItemPageComp'>
         <div className='col'>
@@ -21,6 +22,7 @@ export default function ItemPageRent({ title, textDescr, price, textRent }) {
             </div>
             <DescriptionItem type='Описание' description={textDescr}/>
             <DescriptionItem type='Условия аренды' description={textRent}/>
+            <Parameters tableType={tableType} data={data} selectedItemSlug={selectedItemSlug}/>
             <YouCanLike />
         </div>
         <div className='col2'>

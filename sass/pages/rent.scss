@@ -1,16 +1,26 @@
-.title{
-    color: $title;
-font-family: 'Montserrat';
-font-size: 48px;
-font-weight: 600;
-line-height: 120%;
-text-align: center;
-margin-top: 70px;
+.title {
+  color: $title;
+  font-family: "Montserrat";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  margin-top: 70px;
 }
-.wrap{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 45px;
-    column-gap: 100px;
-    justify-content: center;
+
+.pageRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+  width: 100%;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 45px;
+  column-gap: 100px;
+  flex-shrink: 10000;
 }

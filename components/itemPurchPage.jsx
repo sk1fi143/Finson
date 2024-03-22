@@ -3,8 +3,9 @@ import YouCanLike from './youCanLike'
 import DescriptionItem from './descriptionItem'
 import Form from './form'
 import Image from 'next/image'
+import Parameters from './parameters'
 
-export default function ItemPagePurch({ title, textDescr, price }) {
+export default function ItemPagePurch({ title, textDescr, price, tableType, data, selectedItemSlug }) {
   return (
     <div className='ItemPageComp'>
         <div className='col'>
@@ -20,6 +21,7 @@ export default function ItemPagePurch({ title, textDescr, price }) {
                 <Image src='' alt='' className='gallery__img'/>
             </div>
             <DescriptionItem type='Описание' description={textDescr}/>
+            <Parameters tableType={tableType} data={data} selectedItemSlug={selectedItemSlug}/>
             <YouCanLike />
         </div>
         <div className='col2'>

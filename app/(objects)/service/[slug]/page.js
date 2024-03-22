@@ -17,7 +17,7 @@ export default function ItemPage({ params }) {
       <ItemPageService
         textDescr='qqwqwqwqwqwqwqwqw'
         title={selectedItem.name}
-        price={selectedItem.price}
+        price={selectedItem.price.toLocaleString()}
       />
     </div>
   );

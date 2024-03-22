@@ -8,7 +8,7 @@ export const ItemCard = ({ item }) => {
       <img src="" alt="" />
       <div className="row">
         <h3 className="name">{item.name}</h3>
-        <span className="price">{item.price} THB</span>
+        <span className="price">{item.price.toLocaleString()} THB</span>
       </div>
       <div className="character">
         <div className="section">
