@@ -11,6 +11,26 @@
   padding-bottom: 20px;
   row-gap: 30px;
 
+  .key{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .range{
+    width: 80%;
+    margin-right: 30px;
+  }
+
+  .rowPrice{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
+
   &__title{
     color: $black;
     font-family: "Montserrat";

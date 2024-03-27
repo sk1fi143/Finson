@@ -29,8 +29,8 @@ export default function ItemPage({ params }) {
   return (
     <div>
       <ItemPageRent
-        textDescr='ffdsfdfdfdfdfdf'
-        textRent='qwqwqwqwqw'
+        textDescr={selectedItem.description}
+        textRent={selectedItem.conditions}
         title={selectedItem.name}
         price={selectedItem.price.toLocaleString()}
         tableType={tableType}

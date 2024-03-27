@@ -1,44 +1,37 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
     <footer>
       <div className="row rowTop">
-        <Link href='/'><h5>FINSON Property</h5></Link>
+        <Link href="/">
+          <h5>FINSON Property</h5>
+        </Link>
         <ul>
-        <Link href='/rent'><li>Аренда</li></Link>
-        <Link href='/purchase'><li>Продажа</li></Link>
-        {/* <Link href='/cars'><li>Автомобили</li></Link> */}
-        <Link href='/service'><li>Услуги</li></Link>
-        <Link href='/about'><li>О нас</li></Link>
+          <Link href="/rent">
+            <li>Аренда</li>
+          </Link>
+          <Link href="/purchase">
+            <li>Продажа</li>
+          </Link>
+          {/* <Link href='/cars'><li>Автомобили</li></Link> */}
+          <Link href="/service">
+            <li>Услуги</li>
+          </Link>
+          <Link href="/about">
+            <li>О нас</li>
+          </Link>
         </ul>
       </div>
-      <div className="row">
+      <div className="row coladapt">
         <span>© Finson Property, 2024</span>
         <div className="row__icons">
-          <svg
-            width="50.000000"
-            height="50.000000"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
+          <svg width="50.000000" height="50.000000" viewBox="0 0 50 50" fill="none">
             <clipPath id="clip78_940">
-              <rect
-                id="Frame"
-                width="50.000000"
-                height="50.000000"
-                fill="white"
-                fillOpacity="0"
-              />
+              <rect id="Frame" width="50.000000" height="50.000000" fill="white" fillOpacity="0" />
             </clipPath>
-            <rect
-              id="Frame"
-              width="50.000000"
-              height="50.000000"
-              fill="#FFFFFF"
-              fillOpacity="0"
-            />
+            <rect id="Frame" width="50.000000" height="50.000000" fill="#FFFFFF" fillOpacity="0" />
             <g clipPath="url(#clip78_940)">
               <path
                 id="Vector"
@@ -56,28 +49,11 @@ export const Footer = () => {
               />
             </g>
           </svg>
-          <svg
-            width="50.000000"
-            height="50.000000"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
+          <svg width="50.000000" height="50.000000" viewBox="0 0 50 50" fill="none">
             <clipPath id="clip78_937">
-              <rect
-                id="Frame"
-                width="50.000000"
-                height="50.000000"
-                fill="white"
-                fillOpacity="0"
-              />
+              <rect id="Frame" width="50.000000" height="50.000000" fill="white" fillOpacity="0" />
             </clipPath>
-            <rect
-              id="Frame"
-              width="50.000000"
-              height="50.000000"
-              fill="#FFFFFF"
-              fillOpacity="0"
-            />
+            <rect id="Frame" width="50.000000" height="50.000000" fill="#FFFFFF" fillOpacity="0" />
             <g clipPath="url(#clip78_937)">
               <path
                 id="Vector"
@@ -88,12 +64,7 @@ export const Footer = () => {
               />
             </g>
           </svg>
-          <svg
-            width="50.000000"
-            height="50.000000"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
+          <svg width="50.000000" height="50.000000" viewBox="0 0 50 50" fill="none">
             <clipPath id="clip78_935">
               <rect
                 id="instagram"

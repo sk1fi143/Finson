@@ -1,34 +1,43 @@
 "use client";
 
-import _ from 'lodash';
+import { useState } from "react";
 
-export default function Filter({ handleFilterChange, filterOptions }) {
-  let filterCriteria = _.cloneDeep(filterOptions);
+export default function Filter({ handleFilterChange, filterOptions, data, handlePrice  }) {
+  const [filterCriteria, setFilterCriteria] = useState(filterOptions);
+  const [maxPrice, setMaxPrice] = useState(1000000);
 
   const handleCheckboxChange = (category, value) => {
-    let updatedFilterCriteria = _.cloneDeep(filterCriteria);
+    setFilterCriteria((prevCriteria) => {
+      const updatedFilterCriteria = { ...prevCriteria };
+      updatedFilterCriteria[category] = updatedFilterCriteria[
+        category
+      ].includes(value)
+        ? updatedFilterCriteria[category].filter((item) => item !== value)
+        : [...updatedFilterCriteria[category], value];
 
-    if (filterCriteria[category].includes(value)) {
-      updatedFilterCriteria[category] = filterCriteria[category].filter(item => item !== value);
-    } else {
-      updatedFilterCriteria[category] = [...filterCriteria[category], value];
-    }
-
-    handleFilterChange(updatedFilterCriteria);
+      handleFilterChange(updatedFilterCriteria);
+      return updatedFilterCriteria;
+    });
   };
+
+  const handlePriceChange = (value) => {
+    setMaxPrice(value);
+    const filteredResult = data.filter((item) => item.price <= value); // Фильтрация по цене
+    handlePrice(filteredResult); // Вызов функции обновления данных
+  };
+  
 
   return (
     <div className="filter">
       <h3 className="filter__title">Фильтры</h3>
       {Object.keys(filterOptions).map((category) => (
-        <>
+        <div className="key" key={category}>
           <div className="filter__line"></div>
-          <div className="filter__col" key={category}>
+          <div className="filter__col">
             <span className="filter__col__span">{category}</span>
             {filterOptions[category].map((option) => (
               <label key={option}>
                 <input
-                  key={option}
                   type="checkbox"
                   value={option}
                   onChange={() => handleCheckboxChange(category, option)}
@@ -37,8 +46,21 @@ export default function Filter({ handleFilterChange, filterOptions }) {
               </label>
             ))}
           </div>
-        </>
+        </div>
       ))}
+      <input
+        className="range"
+        type="range"
+        min={0}
+        max={1000000}
+        value={maxPrice}
+        step={10000}
+        onChange={(e) => handlePriceChange(parseInt(e.target.value))}
+      />
+      <div className="rowPrice">
+        <span>0 THB</span>
+        <span>{maxPrice.toLocaleString()} THB</span>
+      </div>
     </div>
   );
 }

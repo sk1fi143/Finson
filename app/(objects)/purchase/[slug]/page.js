@@ -30,7 +30,7 @@ export default function ItemPage({ params }) {
   return (
     <div>
       <ItemPagePurch
-        textDescr='qqwqwqwqwqwqwqwqw'
+        textDescr={selectedItem.description}
         title={selectedItem.name}
         price={selectedItem.price.toLocaleString()}
         tableType={tableType}

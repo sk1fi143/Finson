@@ -2,7 +2,7 @@ import ItemPageService from "@/components/itemServicePage";
 import data from "@/app/data";
 
 export const metadata = {
-  title: "FINSON PROPERTY",
+  title: "Услуги",
 };
 
 export default function ItemPage({ params }) {
@@ -15,7 +15,7 @@ export default function ItemPage({ params }) {
   return (
     <div>
       <ItemPageService
-        textDescr='qqwqwqwqwqwqwqwqw'
+        textDescr={selectedItem.description}
         title={selectedItem.name}
         price={selectedItem.price.toLocaleString()}
       />

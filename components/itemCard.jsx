@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const ItemCard = ({ item }) => {
   return (
     <div className="item">
       <div className="card">
-      <img src="" alt="" />
+      <Image src="" alt="" className="itemServiceImage"/>
       <div className="row">
         <h3 className="name">{item.name}</h3>
         <span className="price">{item.price.toLocaleString()} THB</span>

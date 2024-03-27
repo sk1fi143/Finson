@@ -19,6 +19,10 @@
     column-gap: 82px;
   }
 
+  &__adapt {
+    display: none;
+  }
+
   &__button {
     width: 260px;
     height: 60px;
@@ -30,6 +34,10 @@
     line-height: 22px;
     color: $white;
     cursor: pointer;
+  }
+
+  &__grid {
+    display: none;
   }
 }
 
@@ -72,38 +80,20 @@
     }
 
     &__elements {
-      display: flex;
-      flex-direction: row;
-      column-gap: 30px;
+      display: none !important;
     }
 
     &__button {
-      width: 130px;
-      height: 30.14px;
-      font-size: 10px;
-      border-radius: 10px;
-    }
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 479px) {
-  .Main-Block {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 25px;
-
-    &__title {
-      font-size: 22px;
+      display: none;
     }
 
-    &__elements {
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-    }
-
-    &__button {
+    &__button__adapt {
+      background: $btn;
+      border: 0px;
+      font-weight: 700;
+      line-height: 22px;
+      color: $white;
+      cursor: pointer;
       width: 130px;
       height: 30.14px;
       font-size: 10px;
@@ -111,10 +101,114 @@
       margin: auto 0px;
     }
 
-    &__adapt {
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "title title"
+        "first second"
+        "third button";
+      grid-gap: 30px 20px;
+    }
+
+    a{
       display: flex;
-      flex-direction: row;
-      column-gap: 30px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title {
+      grid-area: title;
+    }
+
+    &__firstel {
+      grid-area: first;
+    }
+
+    &__firstel {
+      grid-area: second;
+    }
+
+    &__firstel {
+      grid-area: third;
+    }
+
+    &__firstel {
+      grid-area: button;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .Main-Block {
+    &__title {
+      font-size: 22px;
+    }
+
+    &__elements {
+      display: none;
+      row-gap: 20px;
+    }
+
+    &__button__adapt {
+      background: $btn;
+      border: 0px;
+      font-weight: 700;
+      line-height: 22px;
+      color: $white;
+      cursor: pointer;
+      width: 130px;
+      height: 30.14px;
+      font-size: 10px;
+      border-radius: 10px;
+      margin: auto 0px;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+  .Main-Block {
+    row-gap: 20px;
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "title title"
+        "first second"
+        "third button";
+      grid-gap: 30px 20px;
+    }
+
+    
+    a{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title {
+      grid-area: title;
+    }
+
+    &__firstel {
+      grid-area: first;
+    }
+
+    &__firstel {
+      grid-area: second;
+    }
+
+    &__firstel {
+      grid-area: third;
+    }
+
+    &__firstel {
+      grid-area: button;
     }
   }
 }
