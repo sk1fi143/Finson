@@ -96,6 +96,8 @@
       }
       .gallery {
         column-gap: 25px;
+        width: 700px;
+        overflow: hidden;
 
         .adapt-first {
           display: none;

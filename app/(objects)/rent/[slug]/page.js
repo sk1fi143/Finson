@@ -2,7 +2,7 @@ import ItemPageRent from "@/components/itemRentPage";
 import data from "@/app/data";
 
 export const metadata = {
-  title: "FINSON PROPERTY",
+  title: "Аренда",
 };
 
 const tableType = [

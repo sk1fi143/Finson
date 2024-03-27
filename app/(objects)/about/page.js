@@ -130,7 +130,7 @@ export default function AboutUs() {
           />
           <span className="AboutUs-bottom-main__biglogotext">
             Finson
-            <br />
+            <br/>
             Prorerty
           </span>
         </div>

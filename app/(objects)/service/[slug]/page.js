@@ -6,12 +6,13 @@ export const metadata = {
 };
 
 export default function ItemPage({ params }) {
-  const selectedItem = data.service.find(item => item.slug === params.slug);
-  if(!selectedItem){
-    return(
-      <h1>Услуга не найдена</h1>
-    )
-  } else { metadata.title = selectedItem.name; }
+  const selectedItem = data.service.find((item) => item.slug === params.slug);
+
+  if (!selectedItem) {
+    return <h1>Услуга не найдена</h1>;
+  } else {
+    metadata.title = selectedItem.name;
+  }
   return (
     <div>
       <ItemPageService

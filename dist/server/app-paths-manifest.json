@@ -1,11 +1,1 @@
-{
-  "/_not-found": "app/_not-found.js",
-  "/page": "app/page.js",
-  "/(objects)/rent/page": "app/(objects)/rent/page.js",
-  "/(objects)/purchase/[slug]/page": "app/(objects)/purchase/[slug]/page.js",
-  "/(objects)/purchase/page": "app/(objects)/purchase/page.js",
-  "/(objects)/about/page": "app/(objects)/about/page.js",
-  "/(objects)/rent/[slug]/page": "app/(objects)/rent/[slug]/page.js",
-  "/(objects)/service/[slug]/page": "app/(objects)/service/[slug]/page.js",
-  "/(objects)/service/page": "app/(objects)/service/page.js"
-}
+{}
