@@ -10,6 +10,7 @@
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    background-color: rgb(245, 245, 245) !important;
   }
   
   body {
@@ -20,7 +21,7 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     color: $black;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245) !important;
   }
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -40,6 +41,7 @@
   h4,
   h5 {
     font-family: 'Montserrat';
+    color: $black;
   }
   
   h1 {

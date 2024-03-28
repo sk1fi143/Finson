@@ -1,23 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Filter({ handleFilterChange, filterOptions, data, handlePrice  }) {
   const [filterCriteria, setFilterCriteria] = useState(filterOptions);
   const [maxPrice, setMaxPrice] = useState(1000000);
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState({}); // Состояние для хранения выбранных чекбоксов
 
   const handleCheckboxChange = (category, value) => {
     setFilterCriteria((prevCriteria) => {
       const updatedFilterCriteria = { ...prevCriteria };
-      updatedFilterCriteria[category] = updatedFilterCriteria[
-        category
-      ].includes(value)
+      updatedFilterCriteria[category] = updatedFilterCriteria[        category      ].includes(value)
         ? updatedFilterCriteria[category].filter((item) => item !== value)
         : [...updatedFilterCriteria[category], value];
 
       handleFilterChange(updatedFilterCriteria);
       return updatedFilterCriteria;
     });
+
+    // Сохраняем выбранные чекбоксы при изменении
+    setSelectedCheckboxes({ ...selectedCheckboxes, [category]: value });
+    localStorage.setItem("selectedCheckboxes", JSON.stringify({
+      ...selectedCheckboxes,
+      [category]: value
+    }));
   };
 
   const handlePriceChange = (value) => {
@@ -25,7 +31,12 @@ export default function Filter({ handleFilterChange, filterOptions, data, handle
     const filteredResult = data.filter((item) => item.price <= value); // Фильтрация по цене
     handlePrice(filteredResult); // Вызов функции обновления данных
   };
-  
+
+  useEffect(() => {
+    // Восстанавливаем выбранные чекбоксы из localStorage
+    const savedCheckboxes = JSON.parse(localStorage.getItem("selectedCheckboxes")) || {};
+    setSelectedCheckboxes(savedCheckboxes);
+  }, []);
 
   return (
     <div className="filter">

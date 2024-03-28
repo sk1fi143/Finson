@@ -99,7 +99,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .item,
   .card,
-  .item .card img {
+  .item .card .itemServiceImage {
     width: 280px;
   }
   .item .card .character {
@@ -110,7 +110,7 @@
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .item,
   .card,
-  .item .card img {
+  .item .card .itemServiceImage {
     width: 280px;
   }
   .item .card .character {

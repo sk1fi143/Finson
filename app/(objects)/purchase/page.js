@@ -68,14 +68,13 @@ export default function PurchasePage() {
   };
 
   const [isVisible, setIsVisible] = useState(false);
+
   const toggleBlock = () => {
     setIsVisible(!isVisible);
-    const overlay = document.querySelector('.overlay');
-    if (isVisible) {
-      overlay.classList.add('hidden');
-      document.body.classList.remove('no-scroll');
-      overlay.classList.remove('hidden');
-      document.body.classList.add('no-scroll');
+    if (!isVisible) {
+      document.querySelector('.filter').style.display = 'flex';
+    } else {
+      document.querySelector('.filter').style.display = 'none';
     }
   };
 
@@ -113,7 +112,6 @@ export default function PurchasePage() {
               />
             </svg>
           </button>
-          <Filter handleFilterChange={handleFilterChange} filterOptions={filterOptions} />
         </div>
         <div className="filter-adapt">
           <FilterSvg />

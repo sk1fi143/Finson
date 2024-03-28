@@ -110,6 +110,7 @@ footer {
     }
 
     &__contact-element {
+      align-items: center;
       display: flex;
       flex-direction: row;
       column-gap: 20px;
@@ -490,8 +491,8 @@ footer {
       width: 290px;
 
       svg {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
       }
 
       &__name {
@@ -515,6 +516,7 @@ footer {
 
       &__social-network-element {
         width: 290px;
+        
       }
 
       &__biglogo {
