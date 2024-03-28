@@ -6,6 +6,11 @@
   padding: auto;
   align-items: center;
 
+  .small-card{
+    width: 200px !important;
+    height: 200px !important;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 48px;
@@ -15,7 +20,10 @@
 
   &__elements {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1300px;
+    justify-content: center;
+    row-gap: 60px;
     column-gap: 82px;
   }
 
@@ -46,6 +54,15 @@
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+
+    &__elements {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1000px;
+      justify-content: center;
+      row-gap: 60px;
+      column-gap: 82px;
+    }
   }
 }
 

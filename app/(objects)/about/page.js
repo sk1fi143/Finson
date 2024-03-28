@@ -23,12 +23,7 @@ export default function AboutUs() {
           <div className="AboutUs-top-main__info">
             <h1 className="AboutUs-top-main__title">О нас</h1>
             <p className="AboutUs-top-main__text-info">
-              Si sine metu degendae praesidia firmissima filium morte multavit si sine causa? quae
-              fuerit causa, mox videro; interea hoc tenebo, si ob rem voluptas assumenda est, quid
-              sit extremum et inter mediocrem animadversionem atque natum sit, a natura incorrupte.
-              Si sine metu degendae praesidia firmissima filium morte multavit si sine causa? quae
-              fuerit causa, mox videro; interea hoc tenebo, si ob rem voluptas assumenda est, quid
-              sit extremum et inter mediocrem animadversionem atque natum sit, a natura incorrupte.
+            Наше агентство недвижимости «Finson» - ваше агентство райской жизни на острове. Доверьте нам вашу мечту о роскошной недвижимости на Пхукете и мы поможем вам в ее реализации.
             </p>
           </div>
           <div className="AboutUs-top-main__logo-info">
