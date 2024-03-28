@@ -34,7 +34,7 @@ import compact from "@/public/images/Компактные.png";
 import crossover from "@/public/images/Кроссоверы.png";
 import miniven from "@/public/images/Минивэны.png";
 import moto from "@/public/images/Мото.png";
-import visarun from "@/public/images/ВИзаран.png";
+import visarun from "@/public/images/Визаран.png";
 import objectsService from "@/public/images/Управление объектами.png";
 import studVisa from "@/public/images/Студ.виза.png";
 import transfer from "@/public/images/Трансфер.png";
